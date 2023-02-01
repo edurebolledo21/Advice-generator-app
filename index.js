@@ -6,7 +6,7 @@ const getAdvice = async () => {
   const { slip } = await (await fetch("https://api.adviceslip.com/advice", { method: "GET" })).json();
   const { id, advice } = slip;
   span.innerHTML = `ADVICE #${id}`;
-  parrafo.innerHTML = advice;
+  parrafo.innerHTML = `"${advice}"`;
 };
 getAdvice();
 
